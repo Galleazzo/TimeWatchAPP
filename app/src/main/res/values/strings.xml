@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StopWatchAPP</string>
+    <string name="title_timer">Cronometro</string>
+    <string name="title_timewatch">Temporizador</string>
+</resources>

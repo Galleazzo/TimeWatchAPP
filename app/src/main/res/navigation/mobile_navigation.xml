@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_TimeWatch">
+
+    <fragment
+        android:id="@+id/navigation_TimeWatch"
+        android:name="br.com.fmu.stopwatchapp.ui.timerwatch.TimerWatchFragment"
+        android:label="@string/title_timewatch"
+        tools:layout="@layout/fragment_timerwatch" />
+
+    <fragment
+        android:id="@+id/navigation_timer"
+        android:name="br.com.fmu.stopwatchapp.ui.timer.TimerFragment"
+        android:label="@string/title_timer"
+        tools:layout="@layout/fragment_timer" />
+</navigation>

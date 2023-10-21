@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_TimeWatch"
+        android:icon="@drawable/baseline_timelapse_24"
+        android:title="@string/title_timewatch" />
+
+
+    <item
+        android:id="@+id/navigation_timer"
+        android:icon="@drawable/baseline_timer_24"
+        android:title="@string/title_timer" />
+
+</menu>
