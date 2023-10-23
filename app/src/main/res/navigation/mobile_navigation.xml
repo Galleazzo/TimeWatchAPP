@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_TimeWatch">
+    app:startDestination="@+id/navigation_timer">
+
+    <fragment
+        android:id="@+id/navigation_timer"
+        android:name="br.com.fmu.stopwatchapp.ui.timer.TimerFragment"
+        android:label="@string/title_timer"
+        tools:layout="@layout/fragment_timer" />
 
     <fragment
         android:id="@+id/navigation_TimeWatch"
@@ -11,9 +17,4 @@
         android:label="@string/title_timewatch"
         tools:layout="@layout/fragment_timerwatch" />
 
-    <fragment
-        android:id="@+id/navigation_timer"
-        android:name="br.com.fmu.stopwatchapp.ui.timer.TimerFragment"
-        android:label="@string/title_timer"
-        tools:layout="@layout/fragment_timer" />
 </navigation>

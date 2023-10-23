@@ -6,17 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".ui.timer.TimerFragment">
 
-    <TextView
-        android:id="@+id/text_Timer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <Chronometer
+        android:id="@+id/textTimer"
+        android:layout_width="282dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/button_circle"
+        android:text="@string/pause"
+        android:gravity="center"
+        android:onClick="pauseCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/button_circle"
+        android:text="@string/start"
+        android:gravity="center"
+        android:onClick="startCount"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPause"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+
+    <Button
+        android:id="@+id/buttonFinish"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/button_circle"
+        android:text="@string/finish"
+        android:gravity="center"
+        android:onClick="finishCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/buttonPause"
+        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="329dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPause" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="329dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/clearHistory"
+        android:onClick="clearHistoryCount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.156" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

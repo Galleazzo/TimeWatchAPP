@@ -2,4 +2,8 @@
     <string name="app_name">StopWatchAPP</string>
     <string name="title_timer">Cronometro</string>
     <string name="title_timewatch">Temporizador</string>
+    <string name="start">Start</string>
+    <string name="finish">Finish</string>
+    <string name="pause">Pause</string>
+    <string name="clearHistory">Clear history</string>
 </resources>
