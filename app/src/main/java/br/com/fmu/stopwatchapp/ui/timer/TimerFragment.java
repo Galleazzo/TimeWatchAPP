@@ -1,6 +1,7 @@
 package br.com.fmu.stopwatchapp.ui.timer;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class TimerFragment extends Fragment {
     private Chronometer textTimer;
     private Button buttonStart;
     private Button buttonPause;
+    private Long savedValue;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,12 +34,38 @@ public class TimerFragment extends Fragment {
 
         this.textTimer = (Chronometer) binding.textTimer;
         this.buttonStart = (Button) binding.buttonStart;
+        this.buttonPause = (Button) binding.buttonPause;
+
+        this.buttonStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCount(view);
+            }
+        });
+
+        this.buttonPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pauseCount(view);
+            }
+        });
         
         return root;
     }
 
-    public void startCount(View v) {
+    public void startCount(View view) {
+        if(this.savedValue == null)
+            textTimer.setBase(SystemClock.elapsedRealtime());
+
+        if(this.savedValue != null)
+            this.textTimer.setBase(savedValue);
+
         this.textTimer.start();
+    }
+
+    public void pauseCount(View view) {
+        this.textTimer.stop();
+        this.savedValue = SystemClock.elapsedRealtime() - this.textTimer.getBase();
     }
 
     @Override
