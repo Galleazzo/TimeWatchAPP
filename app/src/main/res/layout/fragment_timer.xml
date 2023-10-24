@@ -60,27 +60,27 @@
         app:layout_constraintStart_toEndOf="@+id/buttonPause"
         app:layout_constraintTop_toBottomOf="@+id/textTimer" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="329dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="48dp"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="288dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPause" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonclearHistory"
         android:layout_width="329dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/clearHistory"
         android:onClick="clearHistoryCount"
+        android:text="@string/clearHistory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintVertical_bias="0.269" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
