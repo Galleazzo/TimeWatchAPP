@@ -20,6 +20,7 @@ Meu aplicativo é um cronômetro e temporizador com duas telas distintas:
 
 - Android Studio
 - Java
+- Gradle
 
 ## 📷 Screenshots
 
