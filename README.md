@@ -1,6 +1,6 @@
-# 📱 Meu Aplicativo de Cronômetro e Temporizador
+# 📱 Aplicativo de Cronômetro e Temporizador
 
-Este é o meu projeto para a Atividade Prática Supervisionada (APS) da faculdade. Meu aplicativo Android foi desenvolvido usando o Android Studio e Java.
+Este é o projeto para a Atividade Prática Supervisionada (APS) da faculdade da materia Desenvolvimento em dispositivos mobile. Meu aplicativo Android foi desenvolvido usando o Android Studio e Java.
 
 ## 📋 Descrição
 
@@ -20,6 +20,12 @@ Meu aplicativo é um cronômetro e temporizador com duas telas distintas:
 
 - Android Studio
 - Java
+
+## 📷 Screenshots
+
+![Screenshot do Cronômetro]
+
+![Screenshot do Temporizador]
 
 ## 🏗️ Como Executar o Projeto
 
