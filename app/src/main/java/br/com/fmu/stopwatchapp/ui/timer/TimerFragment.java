@@ -1,7 +1,9 @@
 package br.com.fmu.stopwatchapp.ui.timer;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +33,7 @@ public class TimerFragment extends Fragment {
     private List<CharSequence> listOfTimes = new ArrayList<>();
     private ArrayAdapter<CharSequence> listAdapter;
     private Button buttonclearHistory;
+    private Vibrator vibrator;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class TimerFragment extends Fragment {
         this.buttonFinish = (Button) binding.buttonFinish;
         this.listView = (ListView) binding.listView;
         this.buttonclearHistory = (Button) binding.buttonclearHistory;
+        this.vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         this.listAdapter = new ArrayAdapter<>(getParentFragment().getContext(), android.R.layout.simple_list_item_1, this.listOfTimes);
 
@@ -85,6 +89,9 @@ public class TimerFragment extends Fragment {
     }
 
     public void startCount(View view) {
+        if (this.vibrator != null) {
+            this.vibrator.vibrate(50);
+        }
         this.buttonPause.setEnabled(true);
         if(this.savedValue == null)
             textTimer.setBase(SystemClock.elapsedRealtime());
@@ -97,6 +104,9 @@ public class TimerFragment extends Fragment {
     }
 
     public void pauseCount(View view) {
+        if (this.vibrator != null) {
+            this.vibrator.vibrate(50);
+        }
         this.buttonStart.setEnabled(true);
         this.textTimer.stop();
         this.savedValue = SystemClock.elapsedRealtime() - this.textTimer.getBase();
@@ -104,6 +114,9 @@ public class TimerFragment extends Fragment {
     }
 
     public void finishCount(View view) {
+        if (this.vibrator != null) {
+            this.vibrator.vibrate(50);
+        }
         this.textTimer.stop();
         this.addCountInList(this.textTimer.getText());
         this.textTimer.setText("00:00");
@@ -119,6 +132,9 @@ public class TimerFragment extends Fragment {
     }
 
     public void clearHistory(){
+        if (this.vibrator != null) {
+            this.vibrator.vibrate(100);
+        }
         this.listAdapter.clear();
         this.listOfTimes.clear();
     }
