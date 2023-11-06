@@ -6,17 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".ui.timerwatch.TimerWatchFragment">
 
-    <TextView
-        android:id="@+id/text_Timerwatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Chronometer
+        android:id="@+id/textTimerWatch"
+        android:layout_width="282dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/button_circle"
+        android:gravity="center"
+        android:onClick="pauseCount"
+        android:text="@string/pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintTop_toBottomOf="@+id/textTimerWatch" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/button_circle"
+        android:gravity="center"
+        android:onClick="startCount"
+        android:text="@string/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimerWatch" />
+
+    <Button
+        android:id="@+id/buttonConfigTime"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/button_circle"
+        android:gravity="center"
+        android:onClick="configTime"
+        android:textSize="12sp"
+        android:text="@string/configTime"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStart"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimerWatch" />
+
+    <Button
+        android:id="@+id/buttonFinish"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/button_circle"
+        android:gravity="center"
+        android:onClick="finishCount"
+        android:text="@string/finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

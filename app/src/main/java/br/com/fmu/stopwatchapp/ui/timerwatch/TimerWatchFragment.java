@@ -24,8 +24,8 @@ public class TimerWatchFragment extends Fragment {
         binding = FragmentTimerwatchBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textTimerwatch;
-        timerWatchViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textTimerWatch;
+
         return root;
     }
 
