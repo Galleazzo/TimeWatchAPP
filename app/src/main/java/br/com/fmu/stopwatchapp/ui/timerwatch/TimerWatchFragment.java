@@ -135,6 +135,7 @@ public class TimerWatchFragment extends Fragment {
     private void updateCountDownFinish(){
         String timeLeftFormatted = "00:00:00";
         textView.setText(timeLeftFormatted);
+
     }
 
     private void updateCountDownText() {
