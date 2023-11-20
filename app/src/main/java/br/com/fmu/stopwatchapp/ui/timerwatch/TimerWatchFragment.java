@@ -116,7 +116,7 @@ public class TimerWatchFragment extends Fragment {
                     updateCountDownText();
 
                 }
-            }.start();
+            };
             isTimerRunning = true;
         }
     }
