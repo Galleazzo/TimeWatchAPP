@@ -40,6 +40,7 @@ public class TimerWatchFragment extends Fragment {
         binding = FragmentTimerwatchBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+
         textView = binding.textTimerWatch;
         start = binding.buttonStart;
         configTime = binding.buttonConfigTime;
@@ -75,6 +76,9 @@ public class TimerWatchFragment extends Fragment {
         });
 
         updateCountDownText();
+
+        final TextView textView = binding.textTimerWatch;
+
 
         return root;
     }
