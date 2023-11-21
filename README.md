@@ -34,5 +34,6 @@ Meu aplicativo é um cronômetro e temporizador com duas telas distintas:
 2. Abra o projeto no Android Studio.
 3. Execute o aplicativo em um emulador ou dispositivo Android.
 
-```bash
+bash
+
 git clone https://github.com/Galleazzo/TimeWatchAPP
