@@ -24,9 +24,11 @@ Meu aplicativo é um cronômetro e temporizador com duas telas distintas:
 
 ## 📷 Screenshots
 
-![Screenshot do Cronômetro]
+- Cronômetro 
+![Cronômetro](app/src/main/res/layout/imgs-layout/cronometro.PNG)
 
-![Screenshot do Temporizador]
+- Temporizador 
+![Temporizador](app/src/main/res/layout/imgs-layout/temporizador.PNG)
 
 ## 🏗️ Como Executar o Projeto
 
